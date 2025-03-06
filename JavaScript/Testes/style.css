@@ -1,0 +1,23 @@
+p {
+    font-family: "Sriracha", Cinzel;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+
+.fundo{
+    background: linear-gradient(to top, #0307ff, 50%, #268bff);
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.card {
+    margin: auto;
+    position: absolute;
+    opacity: 0.5;
+    border-radius: cm;
+    box-shadow: 20px 20px 40px #0f0f0f;
+    position: relative;
+    border-color: blue;
+    border-style: solid;
+}
