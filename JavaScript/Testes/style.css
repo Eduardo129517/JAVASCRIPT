@@ -8,10 +8,10 @@ body{
     background: linear-gradient(to top, #0307ff, 50%, #268bff);
     background-attachment: fixed;
     margin: 0;
+    zoom: 90%;
 }
 
 div#card{
-    position: relative;
     height: 652px; /* 435 * 1.5 */
     width: 360px;  /* 240 * 1.5 */    
     background-color: #7cb9ffc7;
@@ -118,7 +118,7 @@ div.imgfundo {
     background-image: url('Gappy\ Higashikata.jpg');
     background-repeat: no-repeat;
     background-size: cover; /* Faz a imagem cobrir toda a div */
-    opacity: 0.5;
+    opacity: 0.3;
     text-align: center;
     margin: auto;
 }
@@ -143,17 +143,18 @@ div > p{
 
 div#card {
     position: relative; /* Define como referência para elementos filhos com position absolute */
-    height: 652px; /* Altura do card */
-    width: 360px; /* Largura do card */
+    height: 652px; /* 435 * 1.5 */
+    width: 360px;  /* 240 * 1.5 */
     background-color: #7cb9ffc7; /* Cor de fundo do card com transparência */
     margin: auto; /* Centraliza o card horizontalmente */
-    margin-top: 12%; /* Define um espaçamento superior para o card */
-    border-radius: 5px; /* Arredonda os cantos do card */
+    margin-top: 1%; /* Define um espaçamento superior para o card */
+    border-radius: 7px; /* Arredonda os cantos do card */
     text-align: center; /* Centraliza o texto dentro do card */
     padding: 5px 0; /* Adiciona espaçamento interno no topo e base */
     box-shadow: 15px 15px 40px #0099ff; /* Adiciona uma sombra azul ao redor do card */
     transition: transform 0.6s; /* Faz a animação de rotação ser suave */
     transform-style: preserve-3d; /* Mantém o efeito 3D ao girar o card */
+    border: #00b7ff;
 }
 
 div#card:hover {
@@ -174,6 +175,8 @@ div#card:hover {
     width: 100%; /* Ocupa toda a largura do card */
     height: 100%; /* Ocupa toda a altura do card */
     backface-visibility: hidden; /* Esconde a face de trás quando o card não está girado */
+    border: #00b7ff;
+    border-radius: 5px;
 }
 
 .card-back {
@@ -181,4 +184,9 @@ div#card:hover {
     background-image: url('softandwet.jpg'); /* Define a imagem de fundo da parte de trás */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
+    border-radius: 5px;
+    box-shadow: 15px 15px 40px #0099ff;
+    height: 642px; /* 435 * 1.5 */
+    width: 350px;  /* 240 * 1.5 */
+
 }
