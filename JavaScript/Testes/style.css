@@ -12,109 +12,30 @@ body{
 }
 
 div#card{
-    height: 652px; /* 435 * 1.5 */
-    width: 360px;  /* 240 * 1.5 */    
+    width: 100%; /* Ocupa toda a largura do card */
+    height: 100%; /* Ocupa toda a altura do card */   
     background-color: #7cb9ffc7;
     margin: auto;
     margin-top: 12%;
     border-radius: 5px;
     text-align: center;
     padding: 5px 0;
-    box-shadow: 15px 15px 40px #0099ff;
-}
-
-div#card:hover{
-    transform: scale(1.1);
-    transition: .5s;
-    background-color: #0077ff;
-}
-
-img.Goku{
-    position: relative;
-    width: 96%;
-    height: 77%;
-    border-radius: 5px;
-}
-
-div.atributos{
-    position: relative;
-    background-color: #fefee2;
-    width: 96%;
-    height: 20%;
-    border-radius: 5px;
-    margin: 5px auto;
-    padding-bottom: 3px;
 }
 
 div.sobre{
     position: relative;
     background-color: #fefee2;
-    width: 96%;
-    height: 99%;
+    width: 100%; /* Ocupa toda a largura do card */
+    height: 100%; /* Ocupa toda a altura do card */
     border-radius: 5px;
     margin: 1px 5px;
     padding-bottom: 3px;
 }
 
-table{
-    position: relative;
-    padding-top: 2px;
-}
-
-td.carac{
-    font-family: "Sriracha", cursive;
-    font-size: 15px;
-    text-align: left;
-    width: 100px;
-    margin: 0;
-    padding: 0 15px;
-}
-
-td.verif{
-    width: 23px;
-    border-radius: 9px;
-}
-
-td.vdd{
-    background-color: #001aff;
-    border: 1px solid #1d0801;
-}
-
-td.fal{
-    background-color: #0084ff;
-    border: 1px solid #000000;
-}
-
-div#botao{
-    width: 80px;
-    margin: 100px auto 0 auto;
-}
-
-a{
-    text-decoration: none;
-    color: #fefee2;
-}
-
-a > button{
-    font-family: "Sriracha", cursive;
-    font-size: 18px;
-    padding: 7px 14px;
-    border-radius: 10px;
-    box-shadow: 4px 8px 10px #0f0f0f;
-    background-color: #441b23;
-    color: #fefee2;
-}
-
-a > button:hover{
-    cursor: pointer;
-    background-color: #00c3ff;
-    color: #00b7ff;
-}
-
 div.imgfundo {
     position: absolute;
-    width: 347px;  /* 260 * 1.5 */
-    height: 635px; /* 420 * 1.5 */    
+    width: 100%; /* Ocupa toda a largura do card */
+    height: 100%; /* Ocupa toda a altura do card */
     background-image: url('Gappy\ Higashikata.jpg');
     background-repeat: no-repeat;
     background-size: cover; /* Faz a imagem cobrir toda a div */
@@ -129,9 +50,10 @@ div > h1{
     font-family: "Sriracha", cursive;
 }
 
-div > p{
+div > p {
     position: relative;
     font-family: "Sriracha", cursive;
+    font-weight: bold; /* Deixa o texto mais grosso */
     text-align: justify;
     text-indent: 2.5em;
     margin: 20px 5%;
@@ -152,9 +74,8 @@ div#card {
     text-align: center; /* Centraliza o texto dentro do card */
     padding: 5px 0; /* Adiciona espaçamento interno no topo e base */
     box-shadow: 15px 15px 40px #0099ff; /* Adiciona uma sombra azul ao redor do card */
-    transition: transform 0.6s; /* Faz a animação de rotação ser suave */
+    transition: transform 0.1s; /* Faz a animação de rotação ser suave */
     transform-style: preserve-3d; /* Mantém o efeito 3D ao girar o card */
-    border: #00b7ff;
 }
 
 div#card:hover {
@@ -165,7 +86,7 @@ div#card:hover {
     position: relative; /* Mantém os elementos filhos dentro do card */
     width: 100%; /* Ocupa toda a largura do card */
     height: 100%; /* Ocupa toda a altura do card */
-    transition: transform 0.6s; /* Suaviza a rotação */
+    transition: transform 0.1s; /* Suaviza a rotação */
     transform-style: preserve-3d; /* Mantém o efeito 3D na rotação */
 }
 
@@ -175,18 +96,41 @@ div#card:hover {
     width: 100%; /* Ocupa toda a largura do card */
     height: 100%; /* Ocupa toda a altura do card */
     backface-visibility: hidden; /* Esconde a face de trás quando o card não está girado */
-    border: #00b7ff;
-    border-radius: 5px;
 }
 
 .card-back {
-    transform: rotateY(180deg); /* Inverte a face de trás para só aparecer quando o card girar */
-    background-image: url('softandwet.jpg'); /* Define a imagem de fundo da parte de trás */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
+    position: relative;
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
     border-radius: 5px;
     box-shadow: 15px 15px 40px #0099ff;
-    height: 642px; /* 435 * 1.5 */
-    width: 350px;  /* 240 * 1.5 */
+    width: 100%;
+    height: 100%;
+    border: 10px solid #00b7ff;
+}
 
+.card-back::before {
+    content: ''; /* Cria um pseudo-elemento vazio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('softandwet.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Aplica a opacidade à imagem de fundo */
+    z-index: -1; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+}
+
+.status{
+    margin-top: auto;
+    width: 340px;  /* 240 * 1.5 */
+    height: 250px; /* 435 * 1.5 */
+}
+
+.statusfoto{
+    height: 100%;
+    width: 100%;
 }
